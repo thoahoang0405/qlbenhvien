@@ -1,3 +1,27 @@
+
+<?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
+<?php
+
+
+$mabs = $_GET['id'];
+include 'dbConfig.php';
+
+$query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$makhoa = $rs['makhoa'];
+$tenbs = $rs['tenbs'] ;
+$sdt = $rs['sdt'];
+$diachi=$rs['diachi'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +78,7 @@
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./index.html" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./index.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         <span class="material-icons  col-md-1 text-start">
                    logout
@@ -70,7 +94,7 @@
                     <form class=" pe-5">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Mã Bác Sĩ</label>
-                          <input readonly type="text" class="form-control "  style="width: 350px" required>
+                          <input readonly type="text" class="form-control "  style="width: 350px" value="<?php echo $mabs ?>">
                           
                         </div>
                     </form>
@@ -80,7 +104,7 @@
                     <form class=" pe-5">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Mã Khoa</label>
-                          <input readonly type="text" class="form-control "  style="width: 350px" required>
+                          <input readonly type="text" class="form-control "  style="width: 350px" value="<?php echo $makhoa ?>">
                           
                         </div>
                  
@@ -93,7 +117,7 @@
                     <form class=" pe-5">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Họ và Tên</label>
-                          <input readonly type="text" class="form-control "  style="width: 350px" required>
+                          <input readonly type="text" class="form-control "  style="width: 350px" value="<?php echo $tenbs ?>">
                           
                         </div>
                     </div>
@@ -101,7 +125,7 @@
                     <form class=" pe-5">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Số Điện Thoại</label>
-                          <input readonly type="text" class="form-control "  style="width: 350px" required>
+                          <input readonly type="text" class="form-control "  style="width: 350px" value="<?php echo $sdt ?>">
                           
                         </div>
                   
@@ -114,7 +138,7 @@
                     <form class=" pe-5">
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label" style="font-size: 20px;">Địa Chỉ</label>
-                          <input readonly type="text" class="form-control "  style="width: 350px" required>
+                          <input readonly type="text" class="form-control "  style="width: 350px" value="<?php echo $diachi ?>">
                           
                         </div>
                   </div>

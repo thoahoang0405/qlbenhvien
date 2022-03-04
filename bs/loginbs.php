@@ -35,18 +35,18 @@
             </div>
             <div class="col-md-8 mt-5">
                 <h3 CLASS="mt-5">ĐĂNG NHẬP TÀI KHOẢN CỦA BÁC SĨ</h3>
-                <form class="p-3 pe-5">
+                <form class="p-3 pe-5"  action="process_login.php" method="post">
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Tên Đăng Nhập</label>
-                      <input type="text" class="form-control "  style="width: 350px" required>
+                      <input type="text" class="form-control " name="txtTen"  style="width: 350px" required autofocus>
                       
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
-                      <input type="password" class="form-control " style="width: 350px" required>
+                      <input type="password" class="form-control " name="txtMK" style="width: 350px" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary ">Đăng Nhập</button>
+                    <button type="submit" class="btn btn-primary " name="btnĐN">Đăng Nhập</button>
                   </form>
         
             </div>

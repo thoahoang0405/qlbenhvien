@@ -1,5 +1,31 @@
+<?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
+<?php
+
+
+$mabs = $_GET['id'];
+include 'dbConfig.php';
+$query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$makhoa = $rs['makhoa'];
+$tenbs = $rs['tenbs'] ;
+$sdt = $rs['sdt'];
+$diachi=$rs['diachi'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -29,15 +55,11 @@
 
 
 
-
-
-
-
 <div class="container-fluid loginbs">
     <div class="row ">
        
         <div class="col-md-12 pt-4 pb-5 text-black text-center">
-            <h2>KẾT QUẢ KHÁM BỆNH CỦA BỆNH NHÂN </h2>
+            <h2> BỆNH ÁN BỆNH NHÂN </h2>
         </div>
     </div>
 </div>
@@ -52,13 +74,13 @@
         <div class="col-md-10">
             <div class="row">
                 <div class=" text-secondary text-start mt-5 ms-5">
-                    <h3>Xin Chào Bác Sĩ Quang Trung</h3>
+                <h3>Xin Chào Bác Sĩ <?php echo $tenbs ?></h3>
                      
                 </div>
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./index.html" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./index.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         <span class="material-icons  col-md-1 text-start">
                    logout
@@ -71,7 +93,7 @@
             <div class="row mt-5">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                    <H3 class=" text-primary ms-5 mt-5">Nhập Tên hoặc Mã Số bệnh nhân để tìm kiếm kết quả xét nghiệm</H3>
+                    <H3 class=" text-primary ms-5 mt-5">Nhập Mã Số bệnh nhân để tìm kiếm bệnh án</H3>
                     <br>
                     <input class="form-control ms-5 center " type="search" placeholder="Search" aria-label="Search" style="width: 500px">
                   
@@ -86,6 +108,13 @@
         <!-- </div> -->
     </div>
 </div>
+
+
+
+
+
+
+
 </body>
 </div>
 </html>
