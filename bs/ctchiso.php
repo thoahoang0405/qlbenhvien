@@ -1,3 +1,27 @@
+
+<?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
+<?php
+
+
+$mabn = $_GET['id'];
+include 'dbConfig.php';
+
+$query = "SELECT * FROM chisoxn WHERE  mabn ='$mabn'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$huyetap = $rs['huyetap'];
+$nhiptim = $rs['nhiptim'] ;
+$nhommau = $rs['nhommau'];
+$ngayxetnghiem=$rs['ngayxetnghiem'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +52,7 @@
     <link rel="stylesheet" href="../assets/css/ytalogin.css">
 
 
+
 <div class="container-fluid ">
     <div class="row bg-light ">
        
@@ -36,6 +61,23 @@
         </div>
     </div>
 </div>
+<?php
+
+
+
+include 'dbConfig.php';
+$mabs = $_SESSION['LoginOK'];
+$query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$makhoa = $rs['makhoa'];
+$tenbs = $rs['tenbs'] ;
+$sdt = $rs['sdt'];
+$diachi=$rs['diachi'];
+?>
 
 
 <div class="container-fluid  pb-5">
@@ -44,13 +86,13 @@
         <div class="col-md-12">
             <div class="row">
                 <div class=" text-secondary text-start mt-5 ms-5">
-                    <h3>Xin Chào Bác Sĩ Quang Trung</h3>
+                    <h3>Xin Chào Bác Sĩ <?php echo $tenbs ?></h3>
                      
                 </div>
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./chiso.html" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./chiso.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         <span class="material-icons  col-md-1 text-start">
                    logout
@@ -61,18 +103,18 @@
                 
             </div> 
             <div class="row">
-                <h3>Mã Bệnh Nhân: BN001</h3>
-                <div class=" mt-3 ms-3 btn btn-outline-info col-md-2"> <a href="./themchiso.html" style="text-decoration: none; font-size: 20px; color: black" >Thêm Chỉ Số</a></div>
+                <h3>Mã Bệnh Nhân: <?php echo $mabn ?></h3>
+                <div class=" mt-3 ms-3 btn btn-outline-info col-md-2"> <a href="./themchiso.php?id=<?php echo $mabn; ?>" style="text-decoration: none; font-size: 20px; color: black" >Thêm Chỉ Số</a></div>
             </div>
             <div class="row mt-5">
                 <table class="table table-info ">
                     <thead>
                       <tr>
-                        <th scope="col"> Huyết Áp</th>
+                        <th scope="col">Ngày Xét Nghiệm </th>
                         
                         <th scope="col">Nhịp tim</th>
                         <th scope="col">Nhóm  Máu</th>
-                        <th scope="col">Ngày Xét Nghiệm</th>
+                        <th scope="col">Huyết Áp</th>
                        
                         <th scope="col">Sửa Chỉ Số</th>
 
@@ -80,10 +122,10 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th >ưhj</th>
-                        <td>gqwghew</td>
-                        <td>gqwghew</td>
-                        <td>2002569q126</td>
+                        <th ><?php echo $ngayxetnghiem ?></th>
+                        <td><?php echo $nhiptim ?></td>
+                        <td><?php echo $nhommau?></td>
+                        <td><?php echo $huyetap ?></td>
                         
                        
                         <td> <a href="./suachiso.html" class="text-decoration-none"><span class="material-icons">

@@ -1,3 +1,25 @@
+<?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
+<?php
+
+
+$mabn = $_GET['id'];
+include 'dbConfig.php';
+
+$query = "SELECT * FROM chisoxn WHERE  mabn ='$mabn'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$huyetap = $rs['huyetap'];
+$nhiptim = $rs['nhiptim'] ;
+$nhommau = $rs['nhommau'];
+$ngayxetnghiem=$rs['ngayxetnghiem'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +69,7 @@
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./ctchiso.html" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./ctchiso.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         <span class="material-icons  col-md-1 text-start">
                    logout
@@ -57,51 +79,54 @@
                 </div>
                 
             </div> 
+            <form action="process_themchiso.php"  method="post">
             <div class="row mt-5 ">
-                <form class=" pe-5 col-md-5 ">
+               
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Mã Bệnh Nhân</label>
-                      <input readonly type="text" class="form-control "  style="width: 350px" required>
+                      <input readonly type="text" class="form-control "  name="txtmabn" value="<?php echo $mabn ?> " style="width: 350px" required>
                       
-                    </div>
-                </form>
-                <form class=" pe-5 col-md-5 ">
+                   
+              
+            
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Huyết áp</label>
-                      <input  type="text" class="form-control "  style="width: 350px" required>
+                      <input  type="text" class="form-control " name="txtHA"  style="width: 350px" required>
                       
                     </div>
-                </form>
+             
             </div>
             <div class="row ">
-                <form class=" pe-5 col-md-5 ">
+             
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Nhịp Tim</label>
-                      <input  type="text" class="form-control "  style="width: 350px" required>
+                      <input  type="text" class="form-control " name="txtNT"  style="width: 350px" required>
                       
                     </div>
-                </form>
-                <form class=" pe-5 col-md-5 ">
+                
+             
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Nhóm Máu</label>
-                      <input  type="text" class="form-control "  style="width: 350px" required>
+                      <input  type="text" class="form-control " name="txtNM"  style="width: 350px" required>
                       
                     </div>
-                </form>
+              
             </div>
             <div class="row ">
-                <form class=" pe-5 col-md-6 ">
+               
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Ngày Xét Nghiệm</label>
-                      <input  type="text" class="form-control "  style="width: 350px" required>
+                      <input  type="text" class="form-control " name="txtNXN"  style="width: 350px" required>
                       
                     </div>
-                </form>
+              
             </div>
-            <div class="row mt-5 mb-5">
-                <div class=" mt-3 ms-3 btn btn-outline-info col-md-2"> <a href="" style="text-decoration: none; font-size: 20px; color: black" >Lưu Chỉ Số</a></div>
+           
+            <button type="submit" name="btnluu" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>
+               
                 
-         </div>       
+             
+            </form>  
 
            
             <!-- -->
