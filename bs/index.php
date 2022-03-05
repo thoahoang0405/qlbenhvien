@@ -1,6 +1,6 @@
 <?php
 session_start();
-    if(!isset($_SESSION['isLoginOK'])){
+    if(!isset($_SESSION['LoginOK'])){
         header("location:loginbs.php");
     }
   ?>  
@@ -64,7 +64,7 @@ session_start();
         <div class="col-md-10">
             <div class="row">
                 <div class=" text-secondary text-start mt-3 ms-4">
-                    <h3>Xin Chào Bác Sĩ <?php echo $row['tenbs'] ?></h3>
+                    <h3>Xin Chào Bác Sĩ <?php echo $row['tenbs']; ?></h3>
                      
                 </div>
                 <div class=" text-end  ">
