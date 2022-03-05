@@ -7,20 +7,17 @@ if (!isset($_SESSION['LoginOK'])) {
 <?php
 
 
-$mabn = $_GET['id'];
-include 'dbConfig.php';
 
+include 'dbConfig.php';
+$mabn = $_GET['id'];
 $query = "SELECT * FROM chisoxn WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
 $rs = mysqli_fetch_array($result);
 
 mysqli_close($db);
 
-$huyetap = $rs['huyetap'];
-$nhiptim = $rs['nhiptim'] ;
-$nhommau = $rs['nhommau'];
-$ngayxetnghiem=$rs['ngayxetnghiem'];
-?>
+
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +26,7 @@ $ngayxetnghiem=$rs['ngayxetnghiem'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập y tá</title>
+    <title>Chỉ số xét nghiệm</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href=’https://fonts.googleapis.com/css?family=Sofia’ rel=’stylesheet’/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -112,29 +109,42 @@ $diachi=$rs['diachi'];
                       <tr>
                         <th scope="col">Ngày Xét Nghiệm </th>
                         
-                        <th scope="col">Nhịp tim</th>
+                        <th scope="col">Nhịp tim(mm Hg)</th>
                         <th scope="col">Nhóm  Máu</th>
-                        <th scope="col">Huyết Áp</th>
+                        <th scope="col">Huyết Áp(mm hg)</th>
                        
-                        <th scope="col">Sửa Chỉ Số</th>
+                        
 
                       </tr>
                     </thead>
+               <?php     $conn = mysqli_connect('localhost', 'root', '', 'benhvien');
+          if (!$conn) {
+            die("Kết nối thất bại.Vui lòng kiểm tra lại các thông tin máy chủ");
+          }
+          $mabn = $_GET['id'];
+          //b2:thực hiện truy vấn
+          $sql = "SELECT * FROM chisoxn where mabn= '$mabn'";
+          $result = mysqli_query($conn, $sql);
+          //b3:xử lí kq truy vấn
+          if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+          ?>
                     <tbody>
                       <tr>
-                        <th ><?php echo $ngayxetnghiem ?></th>
-                        <td><?php echo $nhiptim ?></td>
-                        <td><?php echo $nhommau?></td>
-                        <td><?php echo $huyetap ?></td>
+                        <th ><?php echo $row['ngayxetnghiem']  ?></th>
+                        <td><?php echo  $row['nhiptim'] ?></td>
+                        <td><?php echo $row['nhommau'] ?></td>
+                        <td><?php echo  $row['huyetap'] ?></td>
                         
                        
-                        <td> <a href="./suachiso.html" class="text-decoration-none"><span class="material-icons">
-                            edit
-                        </span></a>
-                        </td>
-
+                     
                      
                     </tbody>
+                    <?php 
+            }
+        }
+                    
+                    ?>
                   </table>
                 
          </div>       
