@@ -13,8 +13,9 @@ if (mysqli_num_rows($result) > 0) {
 
         <p class=" ">
 
-            <a href="ctbenhan.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "><?php echo $mabn ?></a>
+            <a href="ctdonthuoc.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "><?php echo $mabn ?></a>
         </p>
+
 <?php }
 }
 ?>
