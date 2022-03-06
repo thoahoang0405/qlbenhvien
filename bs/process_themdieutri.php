@@ -1,14 +1,14 @@
 <?php
 // Xử lý giá trị GỬI TỚI
 if (!isset($_POST['btnluu'])) {
-    header("location: themchiso.php" );
+    header("location: themdieutri.php" );
    
 }
 $mabn = $_POST['txtmabn'];
-$HA = $_POST['txtHA'];
- $NT = $_POST['txtNT'];
-$NXN = $_POST['txtNXN'];
-$NM = $_POST['txtNM'];
+$khoakham = $_POST['txtkhoakham'];
+ $kqua = $_POST['txtkq'];
+
+
 
 // Bước 01: Kết nối Database Server
 $conn = mysqli_connect('localhost', 'root', '', 'benhvien');
@@ -17,14 +17,14 @@ if (!$conn) {
 }
 // Bước 02: Thực hiện truy vấn
 
-$sql = "INSERT INTO chisoxn (mabn,huyetap,nhiptim,nhommau) VALUES ('$mabn','$HA','$NT','$NM')";
+$sql = "INSERT INTO dieutri (mabn,benhchinh,huongdieutri) VALUES ('$mabn','$khoakham','$kqua')";
 // echo $sql;
 $ketqua = mysqli_query($conn, $sql);
 
 if (!$ketqua) {
     header("location: error.php"); //Chuyển hướng lỗi
 } else {
-    header("location: chiso.php"); //Chuyển hướng lại Trang Quản trị
+    header("location: kqxn.php"); //Chuyển hướng lại Trang Quản trị
 }
 
 // Bước 03: Đóng kết nối

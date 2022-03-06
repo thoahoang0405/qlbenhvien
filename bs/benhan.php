@@ -3,22 +3,10 @@ if (!isset($_SESSION['LoginOK'])) {
     header("location:loginbs.php");
 }
 ?>
-<?php
 
 
-$mabs = $_GET['id'];
-include 'dbConfig.php';
-$query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
-$result = mysqli_query($db, $query);
-$rs = mysqli_fetch_array($result);
 
-mysqli_close($db);
 
-$makhoa = $rs['makhoa'];
-$tenbs = $rs['tenbs'] ;
-$sdt = $rs['sdt'];
-$diachi=$rs['diachi'];
-?>
 
 
 <!DOCTYPE html>
@@ -31,29 +19,13 @@ $diachi=$rs['diachi'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập y tá</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href=’https://fonts.googleapis.com/css?family=Sofia’ rel=’stylesheet’/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/bs.css">
+    <title>Bệnh án</title>
+    <?php include './template/header.php' ?>
 </head>
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/css/ytalogin.css">
-
-
+  
 
 <div class="container-fluid loginbs">
     <div class="row ">
@@ -64,6 +36,22 @@ $diachi=$rs['diachi'];
     </div>
 </div>
 
+<?php
+
+
+$mabs = $_SESSION['LoginOK'];
+include 'dbConfig.php';
+$query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
+$result = mysqli_query($db, $query);
+$rs = mysqli_fetch_array($result);
+
+mysqli_close($db);
+
+$makhoa = $rs['makhoa'];
+$tenbs = $rs['tenbs'] ;
+$sdt = $rs['sdt'];
+$diachi=$rs['diachi'];
+?>
 
 <div class="container-fluid loginbs pb-5">
     <div class="row ">
@@ -95,11 +83,30 @@ $diachi=$rs['diachi'];
                 <div class="col-md-10">
                     <H3 class=" text-primary ms-5 mt-5">Nhập Mã Số bệnh nhân để tìm kiếm bệnh án</H3>
                     <br>
-                    <input class="form-control ms-5 center " type="search" placeholder="Search" aria-label="Search" style="width: 500px">
+                    <input class="form-control ms-5 center input_search1" type="search" placeholder="Search" aria-label="Search" style="width: 500px">
                   
                   </div>
                 
-         </div>       
+         </div> 
+         <div class="row  " >
+                 <div class="col-md-2"></div>
+                 <div class="col-md-10 ">
+                 <div class=" SEARCH_RESULT1  ms-5"  style=" position:absolute;width:500px; background-color: rgba(192, 243, 252, 0.521); ">  
+                  <p class=" "> 
+                      <a href="" class="text-decoration-none text-black "> </a></p> 
+                  </div>
+                 </div>
+
+
+
+            </div>         
+
+           
+            <!-- -->
+
+
+        <!-- </div> -->
+    </div>      
 
            
             <!-- -->
@@ -110,11 +117,27 @@ $diachi=$rs['diachi'];
 </div>
 
 
+<script>
+
+    $(document).ready(function() {
+
+        $(".input_search1").keyup(function() {
+        var txt = $(".input_search1").val();
+       
+      
+           $.post('ajaxbenhan.php', {data1:txt}, function(data1){
+               $('.SEARCH_RESULT1').html(data1);
+
+
+           })
+       
+
+        })
+
+    })
+    </script>
 
 
 
 
-
-</body>
-</div>
-</html>
+<?php include './template/footer.php' ?>

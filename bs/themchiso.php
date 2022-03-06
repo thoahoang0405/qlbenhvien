@@ -15,10 +15,6 @@ $rs = mysqli_fetch_array($result);
 
 mysqli_close($db);
 
-$huyetap = $rs['huyetap'];
-$nhiptim = $rs['nhiptim'] ;
-$nhommau = $rs['nhommau'];
-$ngayxetnghiem=$rs['ngayxetnghiem'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +65,7 @@ $ngayxetnghiem=$rs['ngayxetnghiem'];
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./ctchiso.php" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./ctchiso.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         <span class="material-icons  col-md-1 text-start">
                    logout
@@ -112,17 +108,9 @@ $ngayxetnghiem=$rs['ngayxetnghiem'];
                     </div>
               
             </div>
-            <div class="row ">
-               
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Ngày Xét Nghiệm</label>
-                      <input  type="text" class="form-control " name="txtNXN"  style="width: 350px" required>
-                      
-                    </div>
-              
-            </div>
+            
            
-            <button type="submit" name="btnluu" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>
+            <button type="submit" name="btnluu" style="width: 100px;" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>
                
                 
              

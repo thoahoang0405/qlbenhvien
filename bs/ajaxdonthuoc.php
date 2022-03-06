@@ -1,10 +1,8 @@
-
-
 <?php
     include("dbConfig.php");
-    $a=$_POST['data'];
+    $a1=$_POST['data1'];
     
-        $query = "SELECT * FROM benhnhan where mabn LIKE '$a%'  ";
+        $query = "SELECT * FROM benhnhan where mabn LIKE '$a1%'  ";
         $result = mysqli_query($db, $query);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -16,7 +14,7 @@
 
 <p class=" "> 
                       
-<a href="ctchiso.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn  ?> </a>
+<a href="CTdonthuoc.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn ?> </a>
 </p> 
 
 
@@ -26,5 +24,3 @@
              <?php }
              }
              ?>
-
-
