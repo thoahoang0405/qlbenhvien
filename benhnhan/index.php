@@ -27,10 +27,11 @@ session_start();
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href=".././assets/css/benhnhan_index.css">
 </head>
+<body  style ="background-color: rgba(192, 243, 252, 0.521)" >
 <div id="luachon" class="container">
     <h1 class="text-center mt-5">THÔNG TIN MUỐN TRA CỨU</h1>
     <div class="row mt-3">
-        <div class="col-md-6">           
+        <div class="col-md-6">          
             <button type="button" class="btn btn-outline-info">
             <a href="xem_benh_an.php?id=<?php echo $row['mabn']; ?> "class="mc">Xem Bệnh Án</a>
                 
@@ -44,6 +45,7 @@ session_start();
             </button>
         </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 crossorigin="anonymous"></script>

@@ -81,6 +81,7 @@ $huongdieutri=$rs['huongdieutri'];
     <link rel="stylesheet" href=".././assets/css/benh_an.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<body style ="background-color: rgba(192, 243, 252, 0.521)">
 <h1 class="text-center mt-5" style="font-size: 60px;">BỆNH ÁN</h1>
 
 <div class="container-fluid">
