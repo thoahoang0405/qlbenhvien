@@ -8,6 +8,7 @@
     $makhoa = $_POST['txtmakhoa'];
     $sdt = $_POST['txtsdt'];
     $password = $_POST['txtpassword'];
+    $diachi = $_POST['txtdiachi'];
 
     // Bước 01: Kết nối Database Server
     $conn = mysqli_connect('localhost','root','','benhvien');
@@ -15,7 +16,7 @@
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "INSERT INTO bacsi (mabs, tenbs, makhoa, sdt, matkhau) VALUES ('$id','$hoten','$makhoa', '$sdt', '$password')";
+    $sql = "INSERT INTO bacsi (mabs, tenbs, makhoa, sdt, matkhau, diachi) VALUES ('$id','$hoten','$makhoa', '$sdt', '$password','$diachi')";
     // echo $sql;
     $ketqua = mysqli_query($conn,$sql);
     

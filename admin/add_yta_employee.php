@@ -44,6 +44,11 @@
                 <input type="password" class="form-control" id="txtpassword" name="txtpassword" placeholder="Nhập mật khẩu">
                
             </div>
+            <div class="form-group">
+                <label for="txtdiachi">Địa chỉ</label>
+                <input type="text" class="form-control" id="txtdiachi" name="txtdiachi" placeholder="Nhập địa chỉ">
+               
+            </div>
             <button type="submit" class="btn btn-primary mt-3">Lưu lại</button>
                
                 </select>

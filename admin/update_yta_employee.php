@@ -73,7 +73,11 @@
                 </select>
                 <button type="submit" class="btn btn-primary mt-3">Lưu lại</button>    
             </div>
-            
+            <div class="form-group">
+                <label for="txtdiachi">Địa chỉ</label>
+                <input type="text" class="form-control" id="txtdiachi" name="txtdiachi" placeholder="Nhập địa chỉ" value="<?php echo $row['diachi']; ?>">
+               
+            </div>
         </form>
     </div>    
     </main>

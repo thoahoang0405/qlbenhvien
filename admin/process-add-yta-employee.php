@@ -9,6 +9,7 @@
     $gioitinh = $_POST['txtgioitinh'];
     $sdt = $_POST['txtsdt'];
     $password = $_POST['txtpassword'];
+    $diachi = $_POST['txtdiachi'];
 
     // Bước 01: Kết nối Database Server
     $conn = mysqli_connect('localhost','root','','benhvien');
@@ -16,7 +17,7 @@
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "INSERT INTO yta (mayta, ten, ngaysinh, gioitinh, std, matkhau) VALUES ('$id','$hoten','$ngaysinh', '$gioitinh', '$sdt', '$password')";
+    $sql = "INSERT INTO yta (mayta, ten, ngaysinh, gioitinh, std, matkhau, diachi) VALUES ('$id','$hoten','$ngaysinh', '$gioitinh', '$sdt', '$password', '$diachi')";
     // echo $sql;
     $ketqua = mysqli_query($conn,$sql);
     

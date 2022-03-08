@@ -16,15 +16,14 @@
     $gioitinh          = $_POST['txtgioitinh'];
     $sdt       = $_POST['txtsdt']; 
     $password       = $_POST['txtpassword'];
-
-    
+    $diachi      = $_POST['txtdiachi'];
     // Bước 01: Kết nối Database Server
     $conn = mysqli_connect('localhost','root','','benhvien');
     if(!$conn){
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
     // Bước 02: Thực hiện truy vấn
-    $sql = "UPDATE yta SET ten ='$hoTen', ngaysinh='$ngaysinh', gioitinh='$gioitinh',  std='$sdt', matkhau = '$password' WHERE mayta = '$maNguoiDung'";
+    $sql = "UPDATE yta SET ten ='$hoTen', ngaysinh='$ngaysinh', gioitinh='$gioitinh',  std='$sdt', matkhau = '$password', diachi='$diachi' WHERE mayta = '$maNguoiDung'";
     // echo $sql;
 
     $ketqua = mysqli_query($conn,$sql);

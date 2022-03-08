@@ -8,10 +8,10 @@
     <title>Signin_Admin_Netflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/signin.css"> 
 </head>
 
-<body>
+<body class="bg">
     <div class="container">
         <div class="col-lg-4 col-md-8 col-sm-10 col-12 mx-lg-auto mx-md-auto mx-5m-auto mx-auto">
             <div class="form__data">
@@ -28,7 +28,7 @@
                               <input type="password" class="form-control" id="exampleInputPassword1" name="txtPass" placeholder="Mật khẩu">
                               <div id="password" class="form-text">Mật khẩu của bạn phải chứa từ 4 đến 60 ký tự.</div>
                             </div>
-                            <button type="submit" class="btn " name="btnSignIn">Đăng nhập</button>
+                            <button type="submit" class="btn btn-primary" name="btnSignIn">Đăng nhập</button>
                             
                             
                     </form>

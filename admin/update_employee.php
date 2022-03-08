@@ -64,7 +64,11 @@
                 <input type="password" class="form-control" id="txtpassword" name="txtpassword" placeholder="Nhập mật khẩu" value="<?php echo $row['matkhau']; ?>">
                 <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
             </div>
-               
+            <div class="form-group">
+                <label for="txtdiachi">Địa chỉ</label>
+                <input type="text" class="form-control" id="txtdiachi" name="txtdiachi" placeholder="Nhập địa chỉ" value="<?php echo $row['diachi']; ?>">
+                <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
+            </div>  
                 </select>
                 <button type="submit" class="btn btn-primary mt-3">Lưu lại</button>    
             </div>

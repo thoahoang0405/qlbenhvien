@@ -8,10 +8,17 @@
     padding: 15px;
     top: 0;
     box-sizing: border-box;
-    background-color: aliceblue !important;
+    background-color: rgb(109, 191, 223) !important;
 }  
 .bg{
-    
+    background-color: rgba(192, 243, 252, 0.521) !important;
     height: 100%;
-    background-size: cover;
+    background-size: auto 180%;
+    margin-top: 100px;
 }
+.nav-link{
+    font-size: 25px;
+    text-align: center;
+    
+}
+
