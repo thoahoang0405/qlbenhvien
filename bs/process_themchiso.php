@@ -7,7 +7,7 @@ if (!isset($_POST['btnluu'])) {
 $mabn = $_POST['txtmabn'];
 $HA = $_POST['txtHA'];
  $NT = $_POST['txtNT'];
-$NXN = $_POST['txtNXN'];
+
 $NM = $_POST['txtNM'];
 
 // Bước 01: Kết nối Database Server
@@ -24,7 +24,8 @@ $ketqua = mysqli_query($conn, $sql);
 if (!$ketqua) {
     header("location: error.php"); //Chuyển hướng lỗi
 } else {
-    header("location: chiso.php"); //Chuyển hướng lại Trang Quản trị
+
+    header("location: success.php");
 }
 
 // Bước 03: Đóng kết nối

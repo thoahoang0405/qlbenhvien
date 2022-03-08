@@ -13,19 +13,18 @@
         if(!$conn){
             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
         }
-        // Bước 02: Thực hiện truy vấn
+       
         $sql = "SELECT * FROM bacsi WHERE mabs = '$tendn' AND matkhau='$pass'";
-        // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
-        // Nghiêm trọng: lỗi SQL Injection
+      
 
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
-            // CẤP THẺ LÀM VIỆC
+           
             $_SESSION['LoginOK'] = $tendn;
-            header("location: index.php"); //Chuyển hướng về Trang quản trị
+            header("location: index.php");
         }else{
-            $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
-            header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+            $error = "Bạn nhập thông tin chưa chính xác";
+            header("location: loginbs.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
         // Bước 03: Đóng kết nối

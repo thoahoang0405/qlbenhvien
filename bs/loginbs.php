@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập y tá</title>
+    <title>Đăng nhập bác sĩ</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href=’https://fonts.googleapis.com/css?family=Sofia’ rel=’stylesheet’/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -45,7 +45,13 @@
                       <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
                       <input type="password" class="form-control " name="txtMK" style="width: 350px" required>
                     </div>
-                    
+                    <?php
+                            if (isset($_GET['error'])) {
+                                echo "<p style='color:red'> {$_GET['error']} </p>";
+                            }
+
+                            ?>
+
                     <button type="submit" class="btn btn-primary " name="btnĐN">Đăng Nhập</button>
                   </form>
         

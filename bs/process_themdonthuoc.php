@@ -24,7 +24,7 @@ $ketqua = mysqli_query($conn, $sql);
 if (!$ketqua) {
     header("location: error.php"); //Chuyển hướng lỗi
 } else {
-    header("location: donthuoc.php"); //Chuyển hướng lại Trang Quản trị
+    header("location: success.php");//Chuyển hướng lại Trang Quản trị
 }
 
 // Bước 03: Đóng kết nối

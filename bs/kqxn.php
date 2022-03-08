@@ -1,3 +1,9 @@
+
+ <?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,11 +20,7 @@
 
 
 
-    <?php session_start();
-if (!isset($_SESSION['LoginOK'])) {
-    header("location:loginbs.php");
-}
-?>
+   
 <?php
 
 
@@ -65,10 +67,11 @@ $diachi=$rs['diachi'];
                     <div class="row">
                         <span class="col-md-9"></span>
                         <button class="col-md-1  text-center btn-dark"> <a href="./index.php" class="text-decoration-none text-white"> quay lại</a></button> 
-                        
-                        <span class="material-icons  col-md-1 text-start">
+                           
+                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <span class="material-icons  col-md-1 ">
                    logout
-                   </span>
+                   </span></a>
                 </div>
                      
                 </div>

@@ -1,3 +1,8 @@
+<?php session_start();
+if (!isset($_SESSION['LoginOK'])) {
+    header("location:loginbs.php");
+}
+?>
 
 
 <!DOCTYPE html>
@@ -14,14 +19,9 @@
 <body>
 
    
-<?php session_start();
-if (!isset($_SESSION['LoginOK'])) {
-    header("location:loginbs.php");
-}
-?>
+
+
 <?php
-
-
 
 include 'dbConfig.php';
 $mabs = $_SESSION['LoginOK'];
@@ -71,9 +71,11 @@ $diachi=$rs['diachi'];
                         <span class="col-md-9"></span>
                         <button class="col-md-1  text-center btn-dark"> <a href="./index.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
-                        <span class="material-icons  col-md-1 text-start">
+                        
+                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <span class="material-icons  col-md-1 ">
                    logout
-                   </span>
+                   </span></a>
                 </div>
                      
                 </div>

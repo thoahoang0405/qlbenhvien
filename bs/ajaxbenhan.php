@@ -23,4 +23,9 @@
              
              <?php }
              }
+             else {
+                ?>
+             <h6 class='text-danger text-center mt-3'>Không tìm thấy mã bệnh nhân </h6>
+               <?php
+           }
              ?>

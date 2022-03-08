@@ -110,11 +110,11 @@ $diachi=$rs['diachi'];
         <div class="col-md-4 text-end  ">
             <div class="row ms-5"> 
                <button class="col-md-3 text-center btn-dark"> <a href="./benhan.php?id=<?php echo $mabn ?>" class="text-decoration-none text-white"> quay lại</a></button>
-             <span class="material-icons col-md-1 text-start mt-1">
-           logout
-           </span></div>
-             
-           </div>
+              
+               <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <span class="material-icons  col-md-1 ">
+                   logout
+                   </span></a>
     </div>
 </div>
 <div class="container-fluid loginbs pt-5">

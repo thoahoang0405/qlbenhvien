@@ -1,5 +1,4 @@
 
-
     <?php session_start();
 if (!isset($_SESSION['LoginOK'])) {
     header("location:loginbs.php");
@@ -12,7 +11,7 @@ if (!isset($_SESSION['LoginOK'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉ số xét nghiệm</title>
+    <title>Thêm thành công</title>
     <?php include './template/header.php' ?>
 </head>
 
@@ -38,28 +37,18 @@ $diachi=$rs['diachi'];
 
 
 
-<div class="container-fluid loginbs">
-    <div class="row ">
-       
-        <div class="col-md-12 pt-4 pb-5 text-black text-center">
-            <h2> CHỈ SỐ XÉT NGHIỆM CỦA BỆNH NHÂN </h2>
-        </div>
-    </div>
-</div>
 
 
-<div class="container-fluid loginbs pb-5">
+
+<div class="container-fluid bg-white pb-5">
     <div class="row ">
         <div class="col-md-2">
             <img src="../assets/img/0006.png" alt=""  style="width:  400px">
 
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 mt-5">
             <div class="row">
-                <div class=" text-secondary text-start mt-5 ms-5">
-                <h3>Xin Chào Bác Sĩ <?php echo $tenbs ?></h3>
-                     
-                </div>
+                
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
@@ -75,26 +64,16 @@ $diachi=$rs['diachi'];
                 
             </div> 
             <div class="row mt-5">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
-                    <H3 class=" text-primary ms-5 mt-5">Nhập Mã Số bệnh nhân để tìm kiếm bảng chỉ số xét nghiệm</H3>
-                    <br>
-                    <input class="form-control ms-5 center input_search" id="" type="search" placeholder="Search" aria-label="Search" style="width: 500px">
-                   </div>   
-            </div>      
-            <div class="row  " >
-                 <div class="col-md-2"></div>
-                 <div class="col-md-10 ">
-                 <div class=" SEARCH_RESULT  ms-5"  style=" position:absolute;width:500px; background-color: rgba(192, 243, 252, 0.521); ">  
-                  <p class=" "> 
-                      <a href="" class="text-decoration-none text-black "> </a></p> 
-                  </div>
-                 </div>
+            <div class="col-md-2"></div>
 
-
-
-            </div>      
-                  
+                <div class="col-md-3 "><img src="../assets/img/comp_3.gif" alt=""  style="width:  400px; "></div>
+                <div class="col-md-5 ms-2 " style="font-size: 50px; margin:100px; font-weight:700;">Có Lỗi Xảy Ra</div>
+                
+                
+                    
+            </div>  
+            </div>    
+           
            
             <!-- -->
 
