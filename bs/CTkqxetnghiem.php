@@ -32,7 +32,7 @@ mysqli_close($db);
 <body>
 
 <div class="container-fluid ">
-    <div class="row bg-light ">
+    <div class="row loginbs ">
        
         <div class="col-md-12 pt-4 pb-5 text-primary text-center">
             <h2>KẾT QUẢ KHÁM BỆNH </h2>
@@ -53,7 +53,7 @@ $tenbs = $rs['tenbs'] ;
 $sdt = $rs['sdt'];
 $diachi=$rs['diachi'];
 ?>
-<div class="container-fluid  pb-5">
+<div class="container-fluid loginbs pb-5">
     <div class="row ">
         
         <div class="col-md-12">
@@ -81,7 +81,7 @@ $diachi=$rs['diachi'];
                 <div class=" mt-3 ms-3 btn btn-outline-info col-md-2"> <a href="./themketqua.php?id=<?php echo $mabn ?>" style="text-decoration: none; font-size: 20px; color: black" >Thêm Kết Quả</a></div>
             </div>
             <div class="row mt-5 ms-5 me-5">
-                <table class="table table-info ">
+                <table class="table table-primary">
                     <thead>
                       <tr>
                         <th scope="col"> Mã Khoa Khám</th>
@@ -129,7 +129,7 @@ $diachi=$rs['diachi'];
          <div class="row mt-5 ms-5 me-5">
              <div class= "col-md-3"> </div>
              
-                <table class="table table-success col-md-6">
+                <table class="table table-warning col-md-6">
                     <thead>
                       <tr>
                         <th scope="col">Bệnh Chính </th>
