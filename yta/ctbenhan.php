@@ -15,16 +15,16 @@ $rs = mysqli_fetch_array($result);
 
 
 $benhchinh = $rs['benhchinh'];
-$huongdieutri = $rs['huongdieutri'] ;
+$huongdieutri = $rs['huongdieutri'];
 
 $query = "SELECT * FROM benhnhan WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
 $rs = mysqli_fetch_array($result);
 
-$tenbn=$rs['tenbn'];
-$gioitinhbn=$rs['gioitinh'];
-$ngaysinhbn=$rs['ngaysinh'];
-$doituongbn=$rs['doituong'];
+$tenbn = $rs['tenbn'];
+$gioitinhbn = $rs['gioitinh'];
+$ngaysinhbn = $rs['ngaysinh'];
+$doituongbn = $rs['doituong'];
 mysqli_close($db);
 ?>
 
@@ -35,25 +35,21 @@ mysqli_close($db);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Bệnh Án</title>
+    <title>Chi Tiết Bệnh Án,Đơn Thuốc</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href=’https://fonts.googleapis.com/css?family=Sofia’ rel=’stylesheet’ />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/bs.css">
 </head>
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="../assets/css/ytalogin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -72,18 +68,27 @@ mysqli_close($db);
 
 
 
-$mayta = $_GET['id'];
-include 'dbConfig.php';
-$query = "SELECT * FROM yta WHERE  mayta ='$mayta'";
-$result = mysqli_query($db, $query);
-$rs = mysqli_fetch_array($result);
+    $mayta = $_GET['id'];
+    include 'dbConfig.php';
+    $query = "SELECT * FROM yta WHERE  mayta ='$mayta'";
+    $result = mysqli_query($db, $query);
+    $rs = mysqli_fetch_array($result);
 
-mysqli_close($db);
-$ten = $rs['ten'] ;
-$ngaysinh=$rs['ngaysinh'];
-$gioitinh=$rs['gioitinh'];
-$sdt = $rs['std'];
-?>
+    $ten = $rs['ten'];
+    $ngaysinh = $rs['ngaysinh'];
+    $gioitinh = $rs['gioitinh'];
+    $sdt = $rs['std'];
+
+    $query = "SELECT * FROM donthuoc WHERE  mabn ='$mabn'";
+    $result = mysqli_query($db, $query);
+    $rs = mysqli_fetch_array($result);
+
+    $madonthuoc = $rs['madonthuoc'];
+    $ngaybatdau = $rs['ngaybatdau'];
+    $ngayketthuc = $rs['ngayketthuc'];
+    $thongtindonthuoc = $rs['thongtindonthuoc'];
+    mysqli_close($db);
+    ?>
 
 
     <div class="container-fluid  pb-5">
@@ -93,27 +98,26 @@ $sdt = $rs['std'];
                 <div class="row">
                     <div class=" text-secondary text-start">
                         <div class="row mt-5">
-                           <div class="col-md-8"></div>   
-                            <a href="benhan.php" class="col-md-1 text-decoration-none">
-                                <i class="bi bi-arrow-return-right"></i>
-                                Quay Trở Lại
+                            <div class="col-md-8"></div>
+                            <a href="benhan.php" class="col-md-1 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                                <i class="bi bi-arrow-return-right me-3"></i>
+                                <h3>Quay Trở Lại</h3>
                             </a>
-                            <!-- <button class="col-md-1  text-center btn-dark"> <a href="benhan.php" class="text-decoration-none text-white"> quay lại</a></button>  -->
-                            <a href="logout.php" class="col-md-2 text-decoration-none">
-                            <i class="bi bi-box-arrow-right"></i>
-                            Đăng Xuất
+                            <a href="logout.php" class="col-md-2 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                                <i class="bi bi-box-arrow-right me-3"></i>
+                                <h3>Đăng Xuất</h3>
                             </a>
-                    </div>
-                    <div class=" text-end  ">
-                        
-                            
+                        </div>
+                        <div class=" text-end  ">
+
+
                         </div>
 
                     </div>
 
                 </div>
                 <div class="row">
-                    <h3 class="text-center mt-5" >Mã Bệnh Nhân: <?php echo $mabn ?></h3>
+                    <h3 class="text-center mt-5">Mã Bệnh Nhân: <?php echo $mabn ?></h3>
                 </div>
                 <div class="row mt-5">
                     <table class="table table-info ">
@@ -134,10 +138,32 @@ $sdt = $rs['std'];
                             <tr>
                                 <th><?php echo $tenbn ?></th>
                                 <td><?php echo $gioitinhbn ?></td>
-                                <td><?php echo $ngaysinhbn?></td>
+                                <td><?php echo $ngaysinhbn ?></td>
                                 <td><?php echo $doituongbn ?></td>
                                 <td><?php echo $benhchinh ?></td>
                                 <td><?php echo $huongdieutri ?></td>
+                        </tbody>
+                    </table>
+
+                </div>          
+                <div class="row">
+                    <table class="table table-info ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Mã Đơn Thuốc </th>
+
+                                <th scope="col">Ngày Bắt Đầu</th>
+                                <th scope="col">Ngày Kết Thúc</th>
+                                <th scope="col">Thông Tin Đơn Thuốc</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><?php echo $madonthuoc ?></th>
+                                <th><?php echo $ngaybatdau ?></th>
+                                <th><?php echo $ngayketthuc ?></th>
+                                <th><?php echo $thongtindonthuoc ?></th>
                         </tbody>
                     </table>
 
