@@ -1,5 +1,5 @@
 <?php session_start();
-if (!isset($_SESSION['LoginOK'])) {
+if (!isset($_SESSION['LoginOKBenhNhan'])) {
     header("location:login_benhnhan.php");
 }
 ?>
