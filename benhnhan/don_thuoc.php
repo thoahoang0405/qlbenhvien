@@ -73,13 +73,16 @@ $thongtindonthuoc=$rs['thongtindonthuoc'];
 				<div class="col-md-6">
 					<tr>
 						<td>THÔNG TIN ĐƠN THUỐC</td>
-						<td><input type="text" name="thongtindonthuoc" value="<?php echo $thongtindonthuoc ?>" readonly></td>
+						<td>
+						<textarea rows="3" cols="30" name="thongtindonthuoc" form="usrform"> <?php  echo $thongtindonthuoc  ?>
+                        </textarea>
+					</td>
 					</tr>
 				</div>
 
 			</div>
-			<a href="http://localhost/qlbenhvien/benhnhan/login_benhnhan.php"><button class="vn">QUAY LẠI TRANG CHỦ</button></a>
-            <a href="http://localhost/qlbenhvien/benhnhan/index.php"><button class="vn">QUAY LẠI TRANG TÌM</button></a>
+			<a href="index.php"><button class="vn">QUAY TRỞ LẠI</button></a>
+            <a href="logout.php"><button class="vn">ĐĂNG XUẤT</button></a> 
 			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 				integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 				crossorigin="anonymous"></script>

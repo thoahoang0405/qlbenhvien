@@ -189,41 +189,33 @@ $huongdieutri=$rs['huongdieutri'];
 				</div>
 </div>
 				<div class="row" style=" margin: 40px;padding: 40px;font-size: 30px;">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<tr>
 						<td>TIỂU SỬ</td>
 						<td><input type="text" name="tieusu" value="<?php echo $tieusu ?>" readonly></td>
 					</tr>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<tr>
 						<td>Bệnh chính</td>
 						<td><input type="text" name="benhchinh" value="<?php echo $benhchinh ?>" readonly></td>
 					</tr>
 				</div>
-				<div class="col-md-4">
+</div>
+				<div class="col-md-12" style=" margin: 40px;padding: 40px;font-size: 25px;">
 					<tr>
-						<td>HƯỚNG ĐIỀU TRỊ</td>
-						<td><input type="text" name="huongdieutri" value="<?php echo $huongdieutri ?>" readonly></td>
+						<td class="" style="margin:70px;">HƯỚNG ĐIỀU TRỊ</td>
+						<td>
+						<textarea rows="5" cols="50" name="huongdieutri" form="usrform" > <?php  echo $huongdieutri ?></textarea>
 					</tr>
 				</div>
-			</div>
+			
 		</div>
 	</div>
 </div>
 
-<a href="http://localhost/qlbenhvien/benhnhan/login_benhnhan.php"><button class="vn">QUAY LẠI TRANG CHỦ</button></a>
-<a href="http://localhost/qlbenhvien/benhnhan/index.php"><button class="vn">QUAY LẠI TRANG TÌM</button></a>
-
-       
-        
-        
-        
-        
-        
-        
-        
-        
+<a href="index.php"><button class="vn">QUAY TRỞ LẠI</button></a>
+<a href="logout.php"><button class="vn">ĐĂNG XUẤT</button></a> 
         
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
