@@ -8,11 +8,7 @@ body{
     display: flex;   
     flex-direction: column;
 }
-.imgbtx{
-    height: 1000px;
-    width: 90%;
-    position: relative;
-}
+
 .main {
     margin: 30px;
     min-height: 40px;

@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body style ="background-color: rgba(192, 243, 252, 0.521)" >
     <div class="img-sign">
-        <img src=".././assets/img/benhnhan.png" alt="" class="imgbtx">
+        <img src=".././assets/img/ảnh bệnh nhân.jpg" alt="" class="imgbtx" style="margin-top: 162px;height: 312px;width: 31%;position: relative;margin-left: 150px;">
         <div class="main">
             <form method="POST" class="form" action="process_login.php">
                 <h6 class="heading mt-1">XIN CHÀO BỆNH NHÂN</h6>
