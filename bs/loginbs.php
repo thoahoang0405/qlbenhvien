@@ -54,6 +54,7 @@
 
                     <button type="submit" class="btn btn-primary " name="btnĐN">Đăng Nhập</button>
                   </form>
+                  <a href="../index.html" class="text-black  text-decoration-none ms-3"> Quay lại trang chủ</a>
         
             </div>
         </div>

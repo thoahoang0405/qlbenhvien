@@ -126,7 +126,7 @@ $sdt = $rs['std'];
                         </thead>
                         <tbody>
                             <tr>
-                                <th><?php echo $tenbn ?></th>
+                                <th><?php echo $madonthuoc ?></th>
                                 <th><?php echo $ngaybatdau ?></th>
                                 <th><?php echo $ngayketthuc ?></th>
                                 <th><?php echo $thongtindonthuoc ?></th>

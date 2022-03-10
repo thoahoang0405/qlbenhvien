@@ -76,18 +76,16 @@ session_start();
                    <button type="button" class="btn-info btnxem"> <a class="text-decoration-none text-white"  href="benhan.php?id=<?php echo $row['mabs']; ?>">Bệnh Án</a> </button>
                 </div>
                 <div class="col-md-5">
-                   <button type="button" class="btn-info btnxem"> <a class="text-decoration-none text-white" href="donthuoc.php?id=<?php echo $row['mabs']; ?>">Đơn Thuốc</a> </button>
+                   <button type="button" class="btn-info btnxem"> <a class="text-decoration-none text-white" href="kqxn.php?id<?php echo $row['mabs']; ?>">Kết quả khám bệnh</a> </button>
                 </div>
                 
             </div>
             <div class="row mt-5 mb-5">
-                <div class="col-md-2"></div>
-                <div class="col-md-5 ">
-                   <button type="button" class="btn-info btnxem "> <a class="text-decoration-none text-white"  href="kqxn.php?id=<?php echo $row['mabs']; ?>">Kết quả khám bệnh</a> </button>
+                <div class="col-md-3"></div>
+                <div class="col-md-8 ">
+                   <button type="button" class="btn-info btnxem "> <a class="text-decoration-none text-white"  href="donthuoc.php?id=<?php echo $row['mabs']; ?>"> Đơn thuốc,Chỉ Số xét nghiệm</a> </button>
                 </div>
-                <div class="col-md-5 ">
-                   <button type="button" class="btn-info btnxem"> <a class="text-decoration-none text-white" href="chiso.php?id=<?php echo $row['mabs']; ?>">Chỉ Số xét nghiệm</a> </button>
-                </div>
+                <div class="col-md-3"></div>
                 
             </div>   
          </div>       

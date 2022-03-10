@@ -65,7 +65,7 @@ mysqli_close($db);
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./ctchiso.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./CTdonthuoc.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                            
                         <a href="logout.php" class="text-decoration-none text-start col-md-1">

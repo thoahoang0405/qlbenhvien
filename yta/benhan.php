@@ -43,7 +43,7 @@
         <div class="row ">
 
             <div class="col-md-12 pt-4 pb-5 text-black text-center">
-                <h2>TRA CỨU BỆNH ÁN CỦA BỆNH NHÂN </h2>
+                <h2>TRA CỨU BỆNH ÁN,ĐƠN THUỐC CỦA BỆNH NHÂN </h2>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
     <div class="container-fluid loginbs pb-5">
         <div class="row ">
             <div class="col-md-2">
-                <img src="../assets/img/0006.png" alt="" style="width:  400px">
+                <img src="../assets/img/nurse5.png" alt="" style="width:  630px">
             </div>
             <div class="col-md-10">
                 <div class="row">
@@ -61,16 +61,16 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class=" text-secondary text-start ">
-                                    <h3>Xin Chào Y tá <?php echo $ten ?></h3>
+                                    <h3 class="text-center">Xin Chào Y tá <?php echo $ten ?></h3>
                                 </div>
                             </div>
-                            <a href="index.php" class="col-md-3 text-decoration-none">
-                                <i class="bi bi-arrow-return-right"></i>
-                                Quay Trở Lại
+                            <a href="index.php" class="col-md-3 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                                <i class="bi bi-arrow-return-right me-2"></i>
+                                <h3>Quay Trở Lại</h3>
                             </a>
-                            <a href="logout.php" class="col-md-1 text-decoration-none">
-                                <i class="bi bi-box-arrow-right"></i>
-                                Đăng Xuất
+                            <a href="logout.php" class="col-md-3 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                                <i class="bi bi-box-arrow-right me-3"></i>
+                                <h3>Đăng Xuất</h3>
                             </a>
 
                         </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="row">
 
-                    <H3 class=" text-black text-center mt-5 ms-3">Nhập Mã Số bệnh nhân để tìm kiếm bệnh án</H3>
+                    <H3 class=" text-black text-center mt-5 ms-3">Nhập Mã Số bệnh nhân để tìm kiếm bệnh án,đơn thuốc</H3>
                     <br>
                     <div class="col-md-4"></div>
                     <div class="col-md-8">

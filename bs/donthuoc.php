@@ -48,7 +48,7 @@ $diachi=$rs['diachi'];
     <div class="row ">
        
         <div class="col-md-12 pt-4 pb-5 text-black text-center">
-            <h2> ĐƠN THUỐC BỆNH NHÂN </h2>
+            <h2> ĐƠN THUỐC,CHỈ SỐ XÉT NGHIỆM CỦA BỆNH NHÂN </h2>
         </div>
     </div>
 </div>
@@ -84,7 +84,7 @@ $diachi=$rs['diachi'];
             <div class="row mt-5">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                    <H3 class=" text-primary ms-5 mt-5">Nhập Mã Số bệnh nhân để tìm kiếm đơn thuốc</H3>
+                    <H3 class=" text-primary ms-5 mt-5">Nhập Mã Số bệnh nhân để tìm kiếm đơn thuốc,chỉ số xét nghiệm</H3>
                     <br>
                     <input class="form-control ms-5 center input_search1" type="search" placeholder="Search" aria-label="Search" style="width: 500px">
                   
