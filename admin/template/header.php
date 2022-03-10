@@ -31,7 +31,7 @@
                     <a class="nav-link active" href="letan.php">Lễ tân</a>
                     </li>
                     <?php
-                        if(isset($_SESSION['isLoginOK']))
+                        if(isset($_SESSION['isLoginAdmin']))
                         {
                             echo '<li class="nav-item">';
                             echo '</li>';

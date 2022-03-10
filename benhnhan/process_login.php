@@ -15,7 +15,7 @@ if(isset($_POST['btnLogin'])){
     $rs= mysqli_fetch_array($result);
     
     if(mysqli_num_rows($result) > 0){
-        $_SESSION['LoginOK'] = $mabn;
+        $_SESSION['LoginOKBenhNhan'] = $mabn;
         // $rs['mabn'] = $_SESSION['LoginOK'];
         header("location: index.php"); 
         }

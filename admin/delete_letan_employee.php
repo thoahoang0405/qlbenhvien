@@ -2,8 +2,8 @@
     // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
+    if(!isset($_SESSION['isLoginAdmin'])){
+        header("location:index.php");
     }
     // admin.php TRUYỀN DỮ LIỆU SANG
     // deleteEmployee: NHẬN DỮ LIỆU TỪ admin.php gửi sang

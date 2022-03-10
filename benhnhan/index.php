@@ -5,7 +5,7 @@ session_start();
     if(!$conn){
         die("kết nối thất bại!");
     };
-                    $mabn = $_SESSION['LoginOK'];
+                    $mabn = $_SESSION['LoginOKBenhNhan'];
                     $query = "SELECT * FROM benhnhan WHERE mabn='$mabn' ";
                     $result = mysqli_query($conn, $query);
                     if (mysqli_num_rows($result) > 0) {
