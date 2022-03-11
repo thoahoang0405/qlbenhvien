@@ -7,7 +7,7 @@ if (!isset($_SESSION['isLoginYta'])) {
 
 
 $mabn = $_GET['id'];
-include 'dbConfig.php';
+include '../../BusinessLogic/yta/dbConfig.php';
 
 $query = "SELECT * FROM dieutri WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
@@ -69,7 +69,7 @@ mysqli_close($db);
 
 
     $mayta = $_GET['id'];
-    include 'dbConfig.php';
+    include '../../BusinessLogic/yta/dbConfig.php';
     $query = "SELECT * FROM yta WHERE  mayta ='$mayta'";
     $result = mysqli_query($db, $query);
     $rs = mysqli_fetch_array($result);
@@ -103,7 +103,7 @@ mysqli_close($db);
                                 <i class="bi bi-arrow-return-right me-3"></i>
                                 <h3>Quay Trở Lại</h3>
                             </a>
-                            <a href="logout.php" class="col-md-2 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                            <a href="../../BusinessLogic/yta/logout.php" class="col-md-2 text-decoration-none text-black d-flex justify-content-center align-items-center">
                                 <i class="bi bi-box-arrow-right me-3"></i>
                                 <h3>Đăng Xuất</h3>
                             </a>

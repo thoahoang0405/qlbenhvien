@@ -7,7 +7,7 @@ if (!isset($_SESSION['isLoginYta'])) {
 
 
 $mayta = $_GET['id'];
-include 'dbConfig.php';
+include '../../BusinessLogic/yta/dbConfig.php';
 
 $query = "SELECT * FROM yta WHERE  mayta ='$mayta'";
 $result = mysqli_query($db, $query);

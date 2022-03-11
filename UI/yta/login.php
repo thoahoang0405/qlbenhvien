@@ -31,7 +31,7 @@
 
                     <div class="d-flex align-content-center justify-content-center">
                         <h3 class="mt-5 me-5">ĐĂNG NHẬP TÀI KHOẢN CỦA Y Tá</h3>
-                        <form class="p-3 pe-5" action="process_login.php" method="post">
+                        <form class="p-3 pe-5" action="../../BusinessLogic/yta/process_login.php" method="post">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tên Đăng Nhập</label>
                                 <input type="text" class="form-control " name="txtTen" style="width: 350px" required autofocus>

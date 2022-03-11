@@ -22,15 +22,15 @@
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginYta'] = $tendn;
-            header("location: index.php"); //Chuyển hướng về Trang quản trị
+            header("location: ../../UI/yta/index.php"); //Chuyển hướng về Trang quản trị
         }else{
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
-            header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+            header("location:../../UI/yta/login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
         // Bước 03: Đóng kết nối
         mysqli_close($conn);
     }else{
-        header("location:login.php");
+        header("location:../../UI/yta/login.php");
     }
 ?>

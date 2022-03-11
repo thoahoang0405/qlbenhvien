@@ -43,7 +43,7 @@ if (!isset($_SESSION['isLoginYta'])) {
                 <img src="../assets/img/nurse5.png" alt="" style="width:  560px">
 
             </div>
-            <?php include 'dbConfig.php';
+            <?php include '../../BusinessLogic/yta/dbConfig.php';
             $mayta = $_SESSION['isLoginYta'];
             $query = "SELECT * FROM yta WHERE mayta='$mayta' ";
             $result = mysqli_query($db, $query);
@@ -63,7 +63,7 @@ if (!isset($_SESSION['isLoginYta'])) {
                         <div class="row">
                             <span class="col-md-9"></span>
 
-                            <a href="logout.php" class="col-md-2 text-decoration-none text-start text-black text-decoration-none d-flex justify-content-center align-items-center">
+                            <a href="../../BusinessLogic/yta/logout.php" class="col-md-2 text-decoration-none text-start text-black text-decoration-none d-flex justify-content-center align-items-center">
                                 <h3>Đăng Xuất</h3>
                                 <span class="material-icons ">
                                     logout

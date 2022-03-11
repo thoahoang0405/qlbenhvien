@@ -1,0 +1,17 @@
+.btx{
+    margin-left: 700px;
+    border-radius: 50px;
+    padding: 25px;
+    align-self: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.vn{
+    font-size: 20px;
+    margin: 143px;
+    margin-top: -30px;
+    padding: 29px;
+    color: white;
+    background-color: blue;
+    border-radius: 16px; 
+}

@@ -23,7 +23,7 @@
     }
     ?>
     <?php
-    include 'dbConfig.php';
+    include '../../BusinessLogic/yta/dbConfig.php';
     $mayta = $_SESSION['isLoginYta'];
     $query = "SELECT * FROM yta WHERE  mayta ='$mayta'";
     $result = mysqli_query($db, $query);
@@ -68,7 +68,7 @@
                                 <i class="bi bi-arrow-return-right me-2"></i>
                                 <h3>Quay Trở Lại</h3>
                             </a>
-                            <a href="logout.php" class="col-md-3 text-decoration-none text-black d-flex justify-content-center align-items-center">
+                            <a href="../../BusinessLogic/yta/logout.php" class="col-md-3 text-decoration-none text-black d-flex justify-content-center align-items-center">
                                 <i class="bi bi-box-arrow-right me-3"></i>
                                 <h3>Đăng Xuất</h3>
                             </a>
@@ -85,10 +85,10 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-8">
                         <input class="form-control mt-3 center input_search" id="" type="search" placeholder="Search" aria-label="Search" style="width: 500px">
-                        <div class="ms-5 SEARCH_RESULT bg-light " style="width:500px;">
+                        <div class=" SEARCH_RESULT bg-light " style="width:500px;">
 
                             <p class=" ">
-                                <a href=" ctbenhan.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "> </a>
+                                <a href="ctbenhan.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "> </a>
                             </p>
                         </div>
                     </div>

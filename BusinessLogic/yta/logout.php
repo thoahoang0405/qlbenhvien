@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['isLoginYta'])){
     unset($_SESSION['isLoginYta']);
-    header('location:index.php');
+    header('location:../../UI/yta/index.php');
     
 }
 

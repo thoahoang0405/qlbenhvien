@@ -1,5 +1,5 @@
 <?php
-include("dbConfig.php");
+include("../../BusinessLogic/yta/dbConfig.php");
 $a = $_POST['data'];
 
 $query = "SELECT * FROM dieutri where mabn LIKE '$a%'  ";
@@ -12,8 +12,8 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 
         <p class=" ">
-
-            <a href="ctbenhan.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "><?php echo $mabn ?></a>
+            
+        <a href="ctbenhan.php?id=<?php echo $row['mabn']; ?>" class="text-decoration-none text-black "><?php echo $mabn ?></a>
         </p>
 <?php }
 }
