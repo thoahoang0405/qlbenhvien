@@ -82,7 +82,7 @@
             </div>
             <div class="form-group">
                 <label for="txtlydovaovien">Lý do vào viện</label>
-                <input type="text" class="form-control" id="txtlydovaovien" name="txtlydovaovien" placeholder="Ngày Nhập viện">
+                <input type="text" class="form-control" id="txtlydovaovien" name="txtlydovaovien" placeholder="Lý do vào viện">
                
             </div>
             <div class="form-group">
@@ -97,7 +97,7 @@
             </div>
             <div class="form-group">
                 <label for="txttieusu">Tiểu sử</label>
-                <input type="text" class="form-control" id="txttieusu" name="txttieusu" placeholder="Ngày Nhập viện">
+                <input type="text" class="form-control" id="txttieusu" name="txttieusu" placeholder="Tiểu sử">
                
             </div>
             <button type="submit" class="btn btn-primary mt-3" name="luulai">Lưu lại</button>
