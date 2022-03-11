@@ -24,7 +24,7 @@
             $_SESSION['isLoginOK'] = $maletan;    
             header("location: admin.php"); //Chuyển hướng về Trang quản trị
         }else{
-            $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
+            $error = "Bạn nhập thông tin tài khoản hoặc mật khẩu chưa chính xác";
             header("location: login.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
