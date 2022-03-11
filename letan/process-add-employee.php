@@ -38,7 +38,7 @@
 
     
     if(!$ketqua && !$ketqua2){
-        echo "Lỗi"; //Chuyển hướng lỗi
+        echo "Thêm thông tin bệnh nhân không thành công"; //Chuyển hướng lỗi
     }else{
         header("location: admin.php"); //Chuyển hướng lại Trang Quản trị
     }
