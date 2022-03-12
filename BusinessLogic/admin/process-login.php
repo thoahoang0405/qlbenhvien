@@ -22,9 +22,9 @@
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginAdmin'] = $email;    
-            header("location: admin.php"); //Chuyển hướng về Trang quản trị
+            header("location:../../UI/admin/admin.php"); //Chuyển hướng về Trang quản trị
         }else{
-            $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
+            $error = "Bạn nhập thông tin tên đăng nhập hoặc mật khẩu chưa chính xác";
             header("location: index.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 

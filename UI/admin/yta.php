@@ -6,21 +6,22 @@
         header("location:index.php");
     }
     
-    require "template/header.php";
+    require "header.php";
 ?>
     <main >
         <div class="container_admin container ">
-            <h3 class=" text-center  mt-5">DANH SÁCH BÁC SĨ</h3>
+            <h3 class=" text-center  mt-5">DANH SÁCH Y TÁ</h3>
             <div>
-                <a class="btn btn-primary " href="add_employee.php">Thêm</a>
+                <a class="btn btn-primary " href="add_yta_employee.php">Thêm</a>
             </div>
-            <table class="table " >
+            <table class="table bg-white" >
                 <thead> 
                     <tr>
-                        <th scope="col">Mã bác sĩ</th>
+                        <th scope="col">Mã y tá</th>
                         <th scope="col">Họ và tên</th>
-                        <th scope="col">Mã khoa</th>
-                        <th scope="col">Sdt</th>
+                        <th scope="col">Ngày sinh</th>
+                        <th scope="col">Giới tính</th>
+                        <th scope="col">Số điện thoại</th>
                         <th scope="col">Mật khẩu</th>
                         <th scope="col">Địa chỉ</th>
                         <th scope="col">Sửa</th>
@@ -36,21 +37,22 @@
                             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
                         }
                         // Bước 02: Thực hiện truy vấn
-                        $sql = "SELECT mabs, tenbs, makhoa, sdt, matkhau, diachi FROM bacsi ";
+                        $sql = "SELECT mayta, ten, ngaysinh, gioitinh, std, matkhau, diachi FROM yta ";
                         $result = mysqli_query($conn,$sql);
                         // Bước 03: Xử lý kết quả truy vấn
                         if(mysqli_num_rows($result) > 0){
                             while($row = mysqli_fetch_assoc($result)){
                     ?>
                                 <tr>
-                                    <th scope="row"><?php echo $row['mabs']; ?></th>
-                                    <td><?php echo $row['tenbs']; ?></td>
-                                    <td><?php echo $row['makhoa']; ?></td>
-                                    <td><?php echo $row['sdt']; ?></td>
+                                    <th scope="row"><?php echo $row['mayta']; ?></th>
+                                    <td><?php echo $row['ten']; ?></td>
+                                    <td><?php echo $row['ngaysinh']; ?></td>
+                                    <td><?php echo $row['gioitinh']; ?></td>
+                                    <td><?php echo $row['std']; ?></td>
                                     <td><?php echo $row['matkhau']; ?></td>
                                     <td><?php echo $row['diachi']; ?></td>
-                                    <td><a href="update_employee.php?mabs=<?php echo $row['mabs']; ?>"><i class="bi bi-pencil-square text-primary "></i></a></td>
-                                    <td><a href="delete_employee.php?mabs=<?php echo $row['mabs']; ?>"><i class="bi bi-trash text-primary"></i></a></td>
+                                    <td><a href="update_yta_employee.php?mayta=<?php echo $row['mayta']; ?>"><i class="bi bi-pencil-square text-primary "></i></a></td>
+                                    <td><a href="delete_yta_employee.php?mayta=<?php echo $row['mayta']; ?>"><i class="bi bi-trash text-primary"></i></a></td>
                                 </tr>
                     <?php
                             }
@@ -66,5 +68,5 @@
     </main>
 
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>

@@ -27,13 +27,13 @@
 
 ?>
 <?php
-    include("template/header.php");
+    include("header.php");
 ?>
     <main>
     <div class="container">
         <h3 class="text-center text-primary mt-5">Cập nhật thông tin lễ tân </h3>
         <!-- Form thêm Dữ liệu nhân viên -->
-        <form action="process-update-letan-employee.php" method="post">
+        <form action="../../BusinessLogic/admin/process-update-letan-employee.php" method="post">
             <div class="form-group">
                 <label for="txtMaND">Mã lễ tân</label>
                 <input type="text" class="form-control" readonly id="txtMaND" name="txtMaND" placeholder="Mã lễ tân" value="<?php echo $row['maletan']; ?>">
@@ -74,5 +74,5 @@
     </div>    
     </main>
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>

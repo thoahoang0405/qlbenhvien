@@ -32,7 +32,7 @@
     if(!$ketqua){
         header("location: error.php"); //Chuyển hướng lỗi
     }else{
-        header("location: letan.php"); //Chuyển hướng lại Trang Quản trị
+        header("location: ../../UI/admin/letan.php"); //Chuyển hướng lại Trang Quản trị
     }
 
     // Bước 03: Đóng kết nối

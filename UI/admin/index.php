@@ -8,7 +8,7 @@
     <title>Signin_Admin_Netflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/signin.css"> 
+    <link rel="stylesheet" href="../assets/css/signinadmin.css"> 
 </head>
 
 <body class="bg">
@@ -19,7 +19,7 @@
                     <div class="form_title">
                         <h1>Đăng nhập Admin</h1>
                     </div>
-                    <form action="process-login.php" method="post">
+                    <form action="../../BusinessLogic/admin/process-login.php" method="post">
                             <div class="mb-3">
                               <input  name="txtEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên đăng nhập">
                               <div id="email" class="form-text" >Vui lòng nhập tên đăng nhập</div>

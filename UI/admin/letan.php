@@ -6,7 +6,7 @@
         header("location:index.php");
     }
     
-    require "template/header.php";
+    require "header.php";
 ?>
     <main >
         <div class="container_admin container ">
@@ -64,5 +64,5 @@
     </main>
 
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>

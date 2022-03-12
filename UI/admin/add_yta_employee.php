@@ -5,14 +5,14 @@
     if(!isset($_SESSION['isLoginAdmin'])){
         header("location:index.php");
     }
-    include("template/header.php");
+    include("header.php");
 ?>
     <main>
     <div class="container">
         <h3 class="text-center text-primary mt-5">Thêm y tá mới</h3>
         <!-- Form thêm Dữ liệu nhân viên -->
         
-        <form action="process-add-yta-employee.php" method="post">
+        <form action="../../BusinessLogic/admin/process-add-yta-employee.php" method="post">
             <div class="form-group">
                 <label for="txtid">Mã y tá</label>
                 <input type="text" class="form-control" id="txtid" name="txtid" placeholder="Nhập mã">
@@ -59,5 +59,5 @@
     </main>
 
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>

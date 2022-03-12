@@ -9,7 +9,7 @@ a{
 }
 .bg{
   background-color: rgba(192, 243, 252, 0.521) !important;
-  background: url(../image/bacsii.png)left/cover no-repeat;
+  background: url(../img/bacsii.png)left/cover no-repeat;
   background-size: auto 100%;
 } 
 .form__data{

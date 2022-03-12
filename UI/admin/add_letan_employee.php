@@ -5,16 +5,16 @@
     if(!isset($_SESSION['isLoginAdmin'])){
         header("location:index.php");
     }
-    include("template/header.php");
+    include("header.php");
 ?>
     <main>
     <div class="container">
-        <h3 class="text-center text-primary mt-5">Thêm bác sĩ mới</h3>
+        <h3 class="text-center text-primary mt-5">Thêm lễ tân mới</h3>
         <!-- Form thêm Dữ liệu nhân viên -->
         
-        <form action="process-add-employee.php" method="post">
+        <form action="../../BusinessLogic/admin/process-add-letan-employee.php" method="post">
             <div class="form-group">
-                <label for="txtid">Mã bác sĩ</label>
+                <label for="txtid">Mã lễ tân</label>
                 <input type="text" class="form-control" id="txtid" name="txtid" placeholder="Nhập mã">
                
             </div>
@@ -23,28 +23,24 @@
                 <input type="text" class="form-control" id="txtHoTen" name="txtHoTen" placeholder="Nhập họ tên">
                 
             </div>
-            
-           
-            <div class="form-group">
-                <label for="txtmakhoa">Mã khoa</label>
-                <input type="text" class="form-control" id="txtmakhoa" name="txtmakhoa" placeholder="Nhập mã khoa">
-               
-            </div>
-            <div class="form-group">
-                <label for="txtsdt">Số điện thoại</label>
-                <input type="text" class="form-control" id="txtsdt" name="txtsdt" placeholder="Nhập số điện thoại">
-               
-            </div>
             <div class="form-group">
                 <label for="txtpassword">Mật khẩu</label>
                 <input type="password" class="form-control" id="txtpassword" name="txtpassword" placeholder="Nhập mật khẩu">
                
             </div>
+            
             <div class="form-group">
-                <label for="txtdiachi">Địa chỉ</label>
-                <input type="text" class="form-control" id="txtdiachi" name="txtdiachi" placeholder="Nhập địa chỉ">
+                <label for="txtgioitinh">Giới tính</label>
+                <input type="text" class="form-control" id="txtgioitinh" name="txtgioitinh" placeholder="Nhập giới tính">
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="txtsdt">Số điện thoại</label>
+                <input type="text" class="form-control" id="txtsdt" name="txtsdt" placeholder="Nhập số điện thoại">
                
             </div>
+            
             <button type="submit" class="btn btn-primary mt-3">Lưu lại</button>
                
                 </select>
@@ -55,5 +51,5 @@
     </main>
 
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>
