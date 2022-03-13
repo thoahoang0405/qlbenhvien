@@ -30,6 +30,7 @@ session_start();
 <body  style ="background-color: rgba(192, 243, 252, 0.521)" >
 <div id="luachon" class="container">
     <h1 class="text-center mt-5">THÔNG TIN MUỐN TRA CỨU</h1>
+    <a  href="../../BusinessLogic/benhnhan/logout.php"> <button class="vn"style="margin-left:1000px;background-color: white;font-size :25px;color:blue;border-radius: 10px; ">ĐĂNG XUẤT</button>
     <div class="row mt-3">
         <div class="col-md-6">          
             <button type="button" class="btn btn-outline-info">
