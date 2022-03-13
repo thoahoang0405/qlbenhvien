@@ -7,7 +7,7 @@ if (!isset($_SESSION['LoginOK'])) {
 
 
 
-include 'dbConfig.php';
+include '../../BusinessLogic/bs/dbConfig.php';
 $mabn = $_GET['id'];
 $query = "SELECT * FROM khambenh WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
@@ -40,7 +40,7 @@ mysqli_close($db);
     </div>
 </div>
 
-<?php    include 'dbConfig.php';
+<?php    include '../../BusinessLogic/bs/dbConfig.php';
 $mabs = $_SESSION['LoginOK'];
 $query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
 $result = mysqli_query($db, $query);
@@ -67,7 +67,7 @@ $diachi=$rs['diachi'];
                         <span class="col-md-9"></span>
                         <button class="col-md-1  text-center btn-dark"> <a href="./kqxn.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
-                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <a href="../../BusinessLogic/bs/logout.php" class="text-decoration-none text-start col-md-1">
                         <span class="material-icons  col-md-1 ">
                    logout
                    </span></a>

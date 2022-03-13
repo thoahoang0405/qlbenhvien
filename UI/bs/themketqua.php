@@ -8,7 +8,7 @@ if (!isset($_SESSION['LoginOK'])) {
 
 
 $mabn = $_GET['id'];
-include 'dbConfig.php';
+include '../../BusinessLogic/bs/dbConfig.php';
 
 $query = "SELECT * FROM khambenh WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
@@ -70,7 +70,7 @@ mysqli_close($db);
                         <button class="col-md-1  text-center btn-dark"> <a href="./CTkqxetnghiem.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button>
                         
                          
-                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <a href="../../BusinessLogic/bs/logout.php" class="text-decoration-none text-start col-md-1">
                         <span class="material-icons  col-md-1 ">
                    logout
                    </span></a>
@@ -79,7 +79,7 @@ mysqli_close($db);
                 </div>
                 
             </div> 
-            <form action="./process_themkqxn.php" method="post">
+            <form action="../../BusinessLogic/bs/process_themkqxn.php" method="post">
             <div class="row mt-5 ">
                 
                     <div class="mb-3">

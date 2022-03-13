@@ -1,3 +1,4 @@
+
 <?php session_start();
 if (!isset($_SESSION['LoginOK'])) {
     header("location:loginbs.php");
@@ -7,15 +8,16 @@ if (!isset($_SESSION['LoginOK'])) {
 
 
 $mabn = $_GET['id'];
-include 'dbConfig.php';
+include '../../BusinessLogic/bs/dbConfig.php';
 
-$query = "SELECT * FROM chisoxn WHERE  mabn ='$mabn'";
+$query = "SELECT * FROM dieutri WHERE  mabn ='$mabn'";
 $result = mysqli_query($db, $query);
 $rs = mysqli_fetch_array($result);
 
 mysqli_close($db);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@ mysqli_close($db);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm chỉ số</title>
+    <title>Thêm kết điều trị</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href=’https://fonts.googleapis.com/css?family=Sofia’ rel=’stylesheet’/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,7 +52,7 @@ mysqli_close($db);
     <div class="row  ">
        
         <div class="col-md-12 pt-4 pb-5 text-primary text-center">
-            <h2>THÊM CHỈ SỐ XÉT NGHIỆM  </h2>
+            <h2>THÊM KẾT ĐIỀU TRỊ </h2>
         </div>
     </div>
 </div>
@@ -65,10 +67,11 @@ mysqli_close($db);
                 <div class=" text-end  ">
                     <div class="row">
                         <span class="col-md-9"></span>
-                        <button class="col-md-1  text-center btn-dark"> <a href="./CTdonthuoc.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button> 
+                        <button class="col-md-1  text-center btn-dark"> <a href="./CTkqxetnghiem.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-white"> quay lại</a></button>
                         
-                           
-                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                       
+                          
+                        <a href="../../BusinessLogic/bs/logout.php" class="text-decoration-none text-start col-md-1">
                         <span class="material-icons  col-md-1 ">
                    logout
                    </span></a>
@@ -77,48 +80,39 @@ mysqli_close($db);
                 </div>
                 
             </div> 
-            <form action="process_themchiso.php"  method="post">
+            <form action="../../BusinessLogic/bs/process_themdieutri.php" method="post">
             <div class="row mt-5 ">
-               
+                
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Mã Bệnh Nhân</label>
-                      <input readonly type="text" class="form-control "  name="txtmabn" value="<?php echo $mabn ?> " style="width: 350px" required>
-                      
-                   
-              
-            
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Huyết áp</label>
-                      <input  type="text" class="form-control " name="txtHA"  style="width: 350px" required>
+                      <input readonly type="text" class="form-control " name="txtmabn"  value="<?php echo $mabn ?>" style="width: 350px" required>
                       
                     </div>
-             
-            </div>
-            <div class="row ">
-             
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Nhịp Tim</label>
-                      <input  type="text" class="form-control " name="txtNT"  style="width: 350px" required>
-                      
-                    </div>
-                
-             
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Nhóm Máu</label>
-                      <input  type="text" class="form-control " name="txtNM"  style="width: 350px" required>
-                      
-                    </div>
-              
-            </div>
-            
-           
-            <button type="submit" name="btnluu" style="width: 100px;" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>
                
                 
-             
-            </form>  
-
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Bệnh Chính</label>
+                      <input  type="text" class="form-control " name="txtkhoakham"  style="width: 350px" required>
+                      
+                    </div>
+               
+            </div>
+            <div class="row ">
+                
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"  style="font-size: 20px;">Hướng điều trị</label>
+                      <input  type="text" class="form-control " name="txtkq"  style="width: 350px" required>
+                      
+                    </div>
+               
+                
+                   
+               
+            </div>
            
+            <button type="submit" name="btnluu" style="width: 100px;" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>     
+
+            </form>
             <!-- -->
 
 

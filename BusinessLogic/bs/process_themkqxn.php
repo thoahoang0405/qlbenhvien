@@ -1,13 +1,13 @@
 <?php
 // Xử lý giá trị GỬI TỚI
 if (!isset($_POST['btnluu'])) {
-    header("location: themdieutri.php" );
+    header("location: ../../UI/bs/themketqua.php" );
    
 }
 $mabn = $_POST['txtmabn'];
 $khoakham = $_POST['txtkhoakham'];
  $kqua = $_POST['txtkq'];
-
+$ngay = $_POST['txtngay'];
 
 
 // Bước 01: Kết nối Database Server
@@ -17,14 +17,14 @@ if (!$conn) {
 }
 // Bước 02: Thực hiện truy vấn
 
-$sql = "INSERT INTO dieutri (mabn,benhchinh,huongdieutri) VALUES ('$mabn','$khoakham','$kqua')";
+$sql = "INSERT INTO khambenh (mabn,makhoakham,ketquakham,ngaykham) VALUES ('$mabn','$khoakham','$kqua','$ngay')";
 // echo $sql;
 $ketqua = mysqli_query($conn, $sql);
 
-if (!$ketqua) {
-    header("location: error.php"); //Chuyển hướng lỗi
+if ($ketqua) {
+    header("location: ../../UI/bs/success.php"); //Chuyển hướng lại Trang Quản trị
 } else {
-    header("location: success.php"); //Chuyển hướng lại Trang Quản trị
+   header("location: ../../UI/bs/error.php"); //Chuyển hướng lỗi 
 }
 
 // Bước 03: Đóng kết nối

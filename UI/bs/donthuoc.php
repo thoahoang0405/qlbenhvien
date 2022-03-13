@@ -23,7 +23,7 @@ if (!isset($_SESSION['LoginOK'])) {
 
 <?php
 
-include 'dbConfig.php';
+include '../../BusinessLogic/bs/dbConfig.php';
 $mabs = $_SESSION['LoginOK'];
 $query = "SELECT * FROM bacsi WHERE  mabs ='$mabs'";
 $result = mysqli_query($db, $query);
@@ -72,7 +72,7 @@ $diachi=$rs['diachi'];
                         <button class="col-md-1  text-center btn-dark"> <a href="./index.php" class="text-decoration-none text-white"> quay lại</a></button> 
                         
                         
-                        <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                        <a href="../../BusinessLogic/bs/logout.php" class="text-decoration-none text-start col-md-1">
                         <span class="material-icons  col-md-1 ">
                    logout
                    </span></a>

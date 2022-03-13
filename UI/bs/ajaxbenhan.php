@@ -4,10 +4,10 @@ if (!isset($_SESSION['LoginOK'])) {
     header("location:loginbs.php");
 }
 $mabs=$_SESSION['LoginOK'];
-    include("dbConfig.php");
+    include("../../BusinessLogic/bs/dbConfig.php");
     $a1=$_POST['data1'];
     
-        $query = "SELECT * FROM benhnhan where mabn LIKE '$a1%' and bacsiphutrach='$mabs'  ";
+        $query = "SELECT * FROM benhnhan where mabn LIKE '$a1%' and bacsiphutrach='$mabs'";
         $result = mysqli_query($db, $query);
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -19,7 +19,7 @@ $mabs=$_SESSION['LoginOK'];
 
 <p class=" "> 
                       
-<a href="CTdonthuoc.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn ?> </a>
+<a href="xembenhan.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn ?> </a>
 </p> 
 
 

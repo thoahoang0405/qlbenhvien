@@ -16,7 +16,7 @@
 
 <p class=" "> 
                       
-<a href="ctchiso.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn  ?> </a>
+<a href="./ctchiso.php?id=<?php echo $mabn; ?>" class="text-decoration-none text-black "><?php echo $mabn  ?> </a>
 </p> 
 
 

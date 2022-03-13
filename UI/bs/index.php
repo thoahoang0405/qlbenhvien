@@ -36,7 +36,7 @@ session_start();
             <img src="../assets/img/0006.png" alt=""  style="width:  400px">
 
         </div>
-        <?php include 'dbConfig.php';
+        <?php include '../../BusinessLogic/bs/dbConfig.php';
                     $mabs = $_SESSION['LoginOK'];
                     $query = "SELECT * FROM bacsi WHERE mabs='$mabs' ";
                     $result = mysqli_query($db, $query);
@@ -60,7 +60,7 @@ session_start();
                             account_circle
                             </span></a>
                         
-                            <a href="logout.php" class="text-decoration-none text-start col-md-1">
+                            <a href="../../BusinessLogic/bs/logout.php" class="text-decoration-none text-start col-md-1">
                         <span class="material-icons  col-md-1 ">
                    logout
                    </span></a>

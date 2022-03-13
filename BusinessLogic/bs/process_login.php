@@ -21,15 +21,15 @@
         if(mysqli_num_rows($result) > 0){
            
             $_SESSION['LoginOK'] = $tendn;
-            header("location: index.php");
+            header("location: ../../UI/bs/index.php");
         }else{
             $error = "Bạn nhập thông tin chưa chính xác";
-            header("location: loginbs.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+            header("location: ../../UI/bs/loginbs.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
         // Bước 03: Đóng kết nối
         mysqli_close($conn);
     }else{
-        header("location:loginbs.php");
+        header("location:../../UI/bs/loginbs.php");
     }
 ?>

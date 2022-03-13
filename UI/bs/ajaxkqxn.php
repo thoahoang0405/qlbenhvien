@@ -4,7 +4,7 @@ if (!isset($_SESSION['LoginOK'])) {
     header("location:loginbs.php");
 }
 $mabs=$_SESSION['LoginOK'];
-    include("dbConfig.php");
+    include("../../BusinessLogic/bs/dbConfig.php");
     $a1=$_POST['data1'];
     
         $query = "SELECT * FROM benhnhan where mabn LIKE '$a1%' and bacsiphutrach='$mabs' ";
