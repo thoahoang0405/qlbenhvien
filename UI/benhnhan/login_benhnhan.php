@@ -17,7 +17,7 @@
     <div class="img-sign">
         <img src=".././assets/img/ảnh bệnh nhân.jpg" alt="" class="imgbtx" style="margin-top: 162px;height: 312px;width: 31%;position: relative;margin-left: 150px;">
         <div class="main">
-            <form method="POST" class="form" action="process_login.php">
+            <form method="POST" class="form" action="../../BusinessLogic/benhnhan/process_login.php">
                 <h6 class="heading mt-1">XIN CHÀO BỆNH NHÂN</h6>
                 <div class="row mt-3">
                     <div class="col-md-12">

@@ -17,12 +17,12 @@ if(isset($_POST['btnLogin'])){
     if(mysqli_num_rows($result) > 0){
         $_SESSION['LoginOKBenhNhan'] = $mabn;
         // $rs['mabn'] = $_SESSION['LoginOK'];
-        header("location: index.php"); 
+        header("location:../../UI/benhnhan/index.php"); 
         }
         
     else{
         $error = "Bạn nhập thông tin chưa chính xác";
-        header("location: login_benhnhan.php?error=$error"); 
+        header("location:../../UI/benhnhan/login_benhnhan.php?error=$error"); 
     }   
 // else {
 //     header('location: index.php');

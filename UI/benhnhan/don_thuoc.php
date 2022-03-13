@@ -82,7 +82,7 @@ $thongtindonthuoc=$rs['thongtindonthuoc'];
 
 			</div>
 			<a href="index.php"><button class="vn">QUAY TRỞ LẠI</button></a>
-            <a href="logout.php"><button class="vn">ĐĂNG XUẤT</button></a> 
+            <a href="../../BusinessLogic/benhnhan/logout.php"><button class="vn">ĐĂNG XUẤT</button></a> 
 			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 				integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 				crossorigin="anonymous"></script>
