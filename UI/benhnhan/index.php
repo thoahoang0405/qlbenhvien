@@ -33,10 +33,11 @@ session_start();
    
       <div class="row">
                 <div class=" text-secondary text-start mt-3 ms-4">
-                    <h3>Xin Chào Bệnh Nhân <?php echo $row['tenbn']; ?></h3>
-                     
+                    <h3>Xin Chào Bệnh Nhân <?php echo $row['tenbn']; ?></h3>  
+                    <a href="../../BusinessLogic/benhnhan/logout.php"><button class="vn" style="font-size: 25px;margin-left: 900px;color: white;background-color: blue;border-radius: 10px; ">ĐĂNG XUẤT</button></a> 
                 </div>
       </div>
+      
     <div class="row mt-3">
         <div class="col-md-6">          
             <button type="button" class="btn btn-outline-info">
