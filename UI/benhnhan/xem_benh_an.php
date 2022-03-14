@@ -162,7 +162,7 @@ $huongdieutri=$rs['huongdieutri'];
 				</div>
 				<div class="col-md-4">
 					<tr>
-						<td>BÁC SĨ PHỤ TRÁCH</td>
+						<td>NGÀY NHẬP VIỆN</td>
 						<td><input type="text" name="ngaynhapvien" value="<?php echo $row['ngaynhapvien'] ?>" readonly></td>
 					</tr>
 				</div>
