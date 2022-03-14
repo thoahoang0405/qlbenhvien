@@ -74,7 +74,7 @@ $diachi = $rs['diachi'];
                                 </a>
                             </div>
                             <div class="col-md-3">
-                                <a class="d-flex  justify-content-center align-items-center text-decoration-none text-black" href="logout.php">
+                                <a class="d-flex  justify-content-center align-items-center text-decoration-none text-black" href="../../BusinessLogic/yta/logout.php">
                                     <i class="bi bi-box-arrow-right me-2"></i>
                                     <h3>Đăng Xuất</h3>
                                 </a>

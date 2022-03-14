@@ -30,6 +30,13 @@ session_start();
 <body  style ="background-color: rgba(192, 243, 252, 0.521)" >
 <div id="luachon" class="container">
     <h1 class="text-center mt-5">THÔNG TIN MUỐN TRA CỨU</h1>
+   
+      <div class="row">
+                <div class=" text-secondary text-start mt-3 ms-4">
+                    <h3>Xin Chào Bệnh Nhân <?php echo $row['tenbn']; ?></h3>
+                     
+                </div>
+      </div>
     <div class="row mt-3">
         <div class="col-md-6">          
             <button type="button" class="btn btn-outline-info">
