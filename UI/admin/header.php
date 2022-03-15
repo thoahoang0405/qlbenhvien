@@ -36,7 +36,7 @@
                             echo '<li class="nav-item">';
                             echo '</li>';
                             echo '<li class="nav-item">';
-                            echo "<a class='nav-link' href='logout.php'>Đăng xuất</a>";
+                            echo "<a class='nav-link' href='../../BusinessLogic/admin/logout.php'>Đăng xuất</a>";
                             echo '</li>';
                         }
 

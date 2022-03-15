@@ -3,7 +3,7 @@
 
     if(isset($_SESSION['isLoginAdmin'])){
         unset($_SESSION['isLoginAdmin']);
-        header("location:index.php");
+        header('location:../../UI/index.html ');
     }
 
 ?>
