@@ -20,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-    <div class="container-fluid loginbs">
+    <div class="container-fluid loginbs "">
         <div class="container ">
             <div class="row">
                 <div>
@@ -32,12 +32,12 @@
                     <div class="d-flex align-content-center justify-content-center">
                         <h3 class="mt-5 me-5">ĐĂNG NHẬP TÀI KHOẢN CỦA Y Tá</h3>
                         <form class="p-3 pe-5" action="../../BusinessLogic/yta/process_login.php" method="post">
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="exampleInputEmail1" class="form-label">Tên Đăng Nhập</label>
                                 <input type="text" class="form-control " name="txtTen" style="width: 350px" required autofocus>
 
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
                                 <input type="password" class="form-control " name="txtMK" style="width: 350px" required>
                             </div>

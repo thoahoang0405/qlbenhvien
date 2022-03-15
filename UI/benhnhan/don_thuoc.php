@@ -43,7 +43,7 @@ $thongtindonthuoc=$rs['thongtindonthuoc'];
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row" style=" margin: 70px;padding: 50px;font-size: 40px;">
+			<div class="row" style=" margin: 70px;padding: 50px;font-size: 30px;">
 				<div class="col-md-4">
 					<tr>
 						<td>MÃ ĐƠN THUỐC</td>

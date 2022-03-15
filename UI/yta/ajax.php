@@ -2,7 +2,7 @@
 include("../../BusinessLogic/yta/dbConfig.php");
 $a = $_POST['data'];
 
-$query = "SELECT * FROM dieutri where mabn LIKE '$a%'  ";
+$query = "SELECT * FROM benhnhan where mabn LIKE '$a%'  ";
 $result = mysqli_query($db, $query);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
