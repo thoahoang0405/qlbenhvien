@@ -5,14 +5,14 @@
     if(!isset($_SESSION['isLoginOK'])){
         header("location:login.php");
     }
-    include("template/header.php");
+    include("../letan/template/header.php");
 ?>
     <main>
     <div class="container">
         <h3 class="text-center text-primary mt-5">Thêm bệnh nhân mới</h3>
         <!-- Form thêm Dữ liệu nhân viên -->
         
-        <form action="process-add-employee.php" method="post">
+        <form action="../../BusinessLogic/letan/process-add-employee.php" method="post">
         <div class="form-group">
                 <label for="txtid">Mã bệnh nhân</label>
                 <input type="text" class="form-control" id="txtid" name="txtid" placeholder="Nhập mã">
@@ -110,5 +110,5 @@
     </main>
 
 <?php
-    include("template/footer.php");
+    include("../letan/template/footer.php");
 ?>

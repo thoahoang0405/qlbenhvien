@@ -40,7 +40,7 @@
     if(!$ketqua && !$ketqua2){
         echo "Thêm thông tin bệnh nhân không thành công"; //Chuyển hướng lỗi
     }else{
-        header("location: admin.php"); //Chuyển hướng lại Trang Quản trị
+        header("location: ../../UI/letan/admin.php"); //Chuyển hướng lại Trang Quản trị
     }
     }
     // Bước 03: Đóng kết nối
