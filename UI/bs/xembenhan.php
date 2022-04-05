@@ -117,7 +117,7 @@ $diachi=$rs['diachi'];
                    </span></a>
     </div>
 </div>
-<div class="container-fluid loginbs pt-5">
+<div class="container-fluid  pt-5">
 	<div class="row">
 		<div class="col-md-12"> 
 			<div class="row">

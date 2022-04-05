@@ -79,7 +79,7 @@ mysqli_close($db);
                 </div>
                 
             </div> 
-            <form action="../../BusinessLogic/bs/process_themkqxn.php" method="post">
+            <form action="../../BusinessLogic/bs/process_themkqxn.php" method="post" style="margin-left: 200px;font-weight:700 ">
             <div class="row mt-5 ">
                 
                     <div class="mb-3">
@@ -113,7 +113,7 @@ mysqli_close($db);
                
             </div>
            
-            <button type="submit" name="btnluu" style="width: 100px;" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>     
+            <button type="submit" name="btnluu" style="width: 100px; font-weight:700" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>     
 
             </form>
             <!-- -->

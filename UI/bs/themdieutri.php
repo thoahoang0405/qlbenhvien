@@ -52,7 +52,7 @@ mysqli_close($db);
     <div class="row  ">
        
         <div class="col-md-12 pt-4 pb-5 text-primary text-center">
-            <h2>THÊM KẾT ĐIỀU TRỊ </h2>
+            <h2>THÊM ĐIỀU TRỊ </h2>
         </div>
     </div>
 </div>
@@ -80,7 +80,7 @@ mysqli_close($db);
                 </div>
                 
             </div> 
-            <form action="../../BusinessLogic/bs/process_themdieutri.php" method="post">
+            <form action="../../BusinessLogic/bs/process_themdieutri.php" method="post" style="margin-left: 200px;font-weight:700 ">
             <div class="row mt-5 ">
                 
                     <div class="mb-3">
@@ -110,7 +110,7 @@ mysqli_close($db);
                
             </div>
            
-            <button type="submit" name="btnluu" style="width: 100px;" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>     
+            <button type="submit" name="btnluu" style="width: 100px; font-weight:700" class="mt-3 ms-3 btn btn-outline-info ">Lưu lại</button>     
 
             </form>
             <!-- -->
